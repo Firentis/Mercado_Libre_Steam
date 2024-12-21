@@ -1,19 +1,68 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo de Productos</title>
   <link rel="stylesheet" href="style.css">
+  <link type="favicon" rel="icon" href="./src/icono.webp">
 </head>
 <body>
   <header>
-    <h1>Catálogo de Productos</h1>
+    <nav class="Nav_1">
+      <div class="logo"></div>
+      <form>
+        <input type="text" placeholder="Buscar un producto, marcas y más...">
+      </form>
+      <div class="otroLogo"></div>
+    </nav>
+
+    <nav class="Nav_2">
+      <div class="ubicacion"></div>
+      <ul>
+        <li><a href="#">Categorías</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Cupones</a></li>
+        <li><a href="#">Supermercado</a></li>
+        <li><a href="#">Moda</a></li>
+        <li><a href="#">Vender</a></li>
+        <li><a href="#">Ayuda/PQR</a></li>
+      </ul>
+
+      <nav class="registro">
+        <ul>
+          <li><a href="#">Crear tu cuenta</a></li>
+          <li><a href="#">Ingresa</a></li>
+          <li><a href="#">Mis Compras</a></li>
+        </ul>
+        <div class="carrito"></div>
+      </nav>
+    </nav>
   </header>
+
   <main>
     <div class="catalogo" id="catalogo"></div>
+   
+    <button class="llamar" onclick="toggleSidebar()">Agregar Producto</button>
+  
+      <!-- Sidebar para agregar productos -->
+  <aside class="sidebar" id="sidebar">
+   
+    <h2>Agregar Nuevo Producto</h2>
+    <form id="formAgregarProducto"a>
+      <input type="text" id="nombre" placeholder="Nombre del producto" required>
+      <input type="number" id="precio" placeholder="Precio" required>
+      <textarea id="descripcion" placeholder="Descripción" required></textarea>
+      <input type="text" id="imagen" placeholder="URL de la imagen" required>
+      <button type="submit">Agregar Producto</button>
+      <button class="close-btn" onclick="toggleSidebar()">Cerrar</button>
+    </form>
+  </aside>
   </main>
-  <script src="./src/script.js">  </script>
+
+
+
+  <script src="script.js">  </script>
 </body>
 </html>
 
